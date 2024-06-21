@@ -6,8 +6,20 @@
 //
 
 import SwiftUI
+import AVKit
 
 struct ContentView: View {
+    @State private var audioPlayer: AVAudioPlayer!
+    @State private var scalePlayButton = false
+    @State private var moveBackgroundImage = false
+    
+    private func playAudio() {
+        let sound = Bundle.main.path(forResource: "magic-in-the-air", ofType: "mp3")
+        audioPlayer = try! AVAudioPlayer(contentsOf: URL(filePath: sound!))
+        audioPlayer.numberOfLoops = -1
+        audioPlayer.play()
+    }
+    
     var body: some View {
         GeometryReader { geo in
             ZStack{
@@ -15,6 +27,12 @@ struct ContentView: View {
                     .resizable()
                     .frame(width: geo.size.width*3, height: geo.size.height)
                     .padding(.top,5)
+                    .offset(x: moveBackgroundImage ? geo.size.width/1.1 : -geo.size.width/1.1)
+                    .onAppear{
+                        withAnimation(.linear(duration: 60).repeatForever()) {
+                            moveBackgroundImage.toggle()
+                        }
+                    }
                 
                 VStack{
                     VStack{
@@ -77,6 +95,12 @@ struct ContentView: View {
                                 .clipShape(.rect(cornerRadius: 10))
                                 .shadow(radius: 5)
                         }
+                        .scaleEffect(scalePlayButton ? 1.15 : 1)
+                        .onAppear {
+                            withAnimation(.easeInOut(duration: 1.5).repeatForever()) {
+                                scalePlayButton.toggle()
+                            }
+                        }
                         
                         Spacer()
                         
@@ -100,6 +124,9 @@ struct ContentView: View {
             .frame(width: geo.size.width, height: geo.size.height)
         }
         .ignoresSafeArea()
+        .onAppear{
+            playAudio()
+        }
     }
 }
 
