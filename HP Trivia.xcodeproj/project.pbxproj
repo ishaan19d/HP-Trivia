@@ -11,6 +11,16 @@
 		4C1D2EDE2C25CC1000E54436 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EDD2C25CC1000E54436 /* ContentView.swift */; };
 		4C1D2EE02C25CC1200E54436 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EDF2C25CC1200E54436 /* Assets.xcassets */; };
 		4C1D2EE32C25CC1200E54436 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EE22C25CC1200E54436 /* Preview Assets.xcassets */; };
+		4C1D2EEA2C25CCC800E54436 /* trivia.json in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EE92C25CCC700E54436 /* trivia.json */; };
+		4C1D2EF32C25CCFF00E54436 /* magic-wand.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EEB2C25CCFE00E54436 /* magic-wand.mp3 */; };
+		4C1D2EF42C25CCFF00E54436 /* page-flip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EEC2C25CCFE00E54436 /* page-flip.mp3 */; };
+		4C1D2EF52C25CCFF00E54436 /* deep-in-the-dell.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EED2C25CCFE00E54436 /* deep-in-the-dell.mp3 */; };
+		4C1D2EF62C25CCFF00E54436 /* hiding-place-in-the-forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EEE2C25CCFE00E54436 /* hiding-place-in-the-forest.mp3 */; };
+		4C1D2EF72C25CCFF00E54436 /* let-the-mystery-unfold.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EEF2C25CCFF00E54436 /* let-the-mystery-unfold.mp3 */; };
+		4C1D2EF82C25CCFF00E54436 /* magic-in-the-air.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EF02C25CCFF00E54436 /* magic-in-the-air.mp3 */; };
+		4C1D2EF92C25CCFF00E54436 /* negative-beeps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EF12C25CCFF00E54436 /* negative-beeps.mp3 */; };
+		4C1D2EFA2C25CCFF00E54436 /* spellcraft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EF22C25CCFF00E54436 /* spellcraft.mp3 */; };
+		4C1D2EFC2C25CFC700E54436 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFB2C25CFC700E54436 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		4C1D2EDD2C25CC1000E54436 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4C1D2EDF2C25CC1200E54436 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C1D2EE22C25CC1200E54436 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4C1D2EE92C25CCC700E54436 /* trivia.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = trivia.json; sourceTree = "<group>"; };
+		4C1D2EEB2C25CCFE00E54436 /* magic-wand.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "magic-wand.mp3"; sourceTree = "<group>"; };
+		4C1D2EEC2C25CCFE00E54436 /* page-flip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "page-flip.mp3"; sourceTree = "<group>"; };
+		4C1D2EED2C25CCFE00E54436 /* deep-in-the-dell.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "deep-in-the-dell.mp3"; sourceTree = "<group>"; };
+		4C1D2EEE2C25CCFE00E54436 /* hiding-place-in-the-forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "hiding-place-in-the-forest.mp3"; sourceTree = "<group>"; };
+		4C1D2EEF2C25CCFF00E54436 /* let-the-mystery-unfold.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "let-the-mystery-unfold.mp3"; sourceTree = "<group>"; };
+		4C1D2EF02C25CCFF00E54436 /* magic-in-the-air.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "magic-in-the-air.mp3"; sourceTree = "<group>"; };
+		4C1D2EF12C25CCFF00E54436 /* negative-beeps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "negative-beeps.mp3"; sourceTree = "<group>"; };
+		4C1D2EF22C25CCFF00E54436 /* spellcraft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spellcraft.mp3; sourceTree = "<group>"; };
+		4C1D2EFB2C25CFC700E54436 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,7 +73,17 @@
 			children = (
 				4C1D2EDB2C25CC1000E54436 /* HP_TriviaApp.swift */,
 				4C1D2EDD2C25CC1000E54436 /* ContentView.swift */,
+				4C1D2EFB2C25CFC700E54436 /* Constants.swift */,
+				4C1D2EE92C25CCC700E54436 /* trivia.json */,
 				4C1D2EDF2C25CC1200E54436 /* Assets.xcassets */,
+				4C1D2EED2C25CCFE00E54436 /* deep-in-the-dell.mp3 */,
+				4C1D2EEE2C25CCFE00E54436 /* hiding-place-in-the-forest.mp3 */,
+				4C1D2EEF2C25CCFF00E54436 /* let-the-mystery-unfold.mp3 */,
+				4C1D2EF02C25CCFF00E54436 /* magic-in-the-air.mp3 */,
+				4C1D2EEB2C25CCFE00E54436 /* magic-wand.mp3 */,
+				4C1D2EF12C25CCFF00E54436 /* negative-beeps.mp3 */,
+				4C1D2EEC2C25CCFE00E54436 /* page-flip.mp3 */,
+				4C1D2EF22C25CCFF00E54436 /* spellcraft.mp3 */,
 				4C1D2EE12C25CC1200E54436 /* Preview Content */,
 			);
 			path = "HP Trivia";
@@ -125,8 +155,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1D2EF52C25CCFF00E54436 /* deep-in-the-dell.mp3 in Resources */,
+				4C1D2EF92C25CCFF00E54436 /* negative-beeps.mp3 in Resources */,
+				4C1D2EF32C25CCFF00E54436 /* magic-wand.mp3 in Resources */,
+				4C1D2EF82C25CCFF00E54436 /* magic-in-the-air.mp3 in Resources */,
+				4C1D2EFA2C25CCFF00E54436 /* spellcraft.mp3 in Resources */,
+				4C1D2EF72C25CCFF00E54436 /* let-the-mystery-unfold.mp3 in Resources */,
 				4C1D2EE32C25CC1200E54436 /* Preview Assets.xcassets in Resources */,
 				4C1D2EE02C25CC1200E54436 /* Assets.xcassets in Resources */,
+				4C1D2EF62C25CCFF00E54436 /* hiding-place-in-the-forest.mp3 in Resources */,
+				4C1D2EF42C25CCFF00E54436 /* page-flip.mp3 in Resources */,
+				4C1D2EEA2C25CCC800E54436 /* trivia.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,6 +178,7 @@
 			files = (
 				4C1D2EDE2C25CC1000E54436 /* ContentView.swift in Sources */,
 				4C1D2EDC2C25CC1000E54436 /* HP_TriviaApp.swift in Sources */,
+				4C1D2EFC2C25CFC700E54436 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
