@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var animateViewsIn = false
     @State private var showInstructions = false
     @State private var showSettings = false
-    
+    @State private var playGame = false
     private func playAudio() {
         let sound = Bundle.main.path(forResource: "magic-in-the-air", ofType: "mp3")
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(filePath: sound!))
@@ -109,7 +109,7 @@ struct ContentView: View {
                         VStack{
                             if animateViewsIn {
                                 Button{
-                                    //Play
+                                    playGame.toggle()
                                 } label: {
                                     Text("Play")
                                         .font(.largeTitle)
@@ -162,7 +162,7 @@ struct ContentView: View {
         }
         .ignoresSafeArea()
         .onAppear{
-//            playAudio()
+            playAudio()
             animateViewsIn.toggle()
         }
         .sheet(isPresented: $showInstructions, content: {
@@ -170,6 +170,9 @@ struct ContentView: View {
         })
         .sheet(isPresented: $showSettings, content: {
             Settings()
+        })
+        .fullScreenCover(isPresented: $playGame, content: {
+            Gameplay()
         })
     }
 }

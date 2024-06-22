@@ -23,6 +23,7 @@
 		4C1D2EFC2C25CFC700E54436 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFB2C25CFC700E54436 /* Constants.swift */; };
 		4C1D2EFE2C26F1A900E54436 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFD2C26F1A900E54436 /* Instructions.swift */; };
 		4C1D2F002C26FC3C00E54436 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFF2C26FC3C00E54436 /* Settings.swift */; };
+		4C1D2F022C2709C800E54436 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2F012C2709C800E54436 /* Gameplay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		4C1D2EFB2C25CFC700E54436 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		4C1D2EFD2C26F1A900E54436 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 		4C1D2EFF2C26FC3C00E54436 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		4C1D2F012C2709C800E54436 /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				4C1D2EDD2C25CC1000E54436 /* ContentView.swift */,
 				4C1D2EFD2C26F1A900E54436 /* Instructions.swift */,
 				4C1D2EFF2C26FC3C00E54436 /* Settings.swift */,
+				4C1D2F012C2709C800E54436 /* Gameplay.swift */,
 				4C1D2EFB2C25CFC700E54436 /* Constants.swift */,
 				4C1D2EE92C25CCC700E54436 /* trivia.json */,
 				4C1D2EDF2C25CC1200E54436 /* Assets.xcassets */,
@@ -183,6 +186,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C1D2EDE2C25CC1000E54436 /* ContentView.swift in Sources */,
+				4C1D2F022C2709C800E54436 /* Gameplay.swift in Sources */,
 				4C1D2EDC2C25CC1000E54436 /* HP_TriviaApp.swift in Sources */,
 				4C1D2EFE2C26F1A900E54436 /* Instructions.swift in Sources */,
 				4C1D2EFC2C25CFC700E54436 /* Constants.swift in Sources */,
