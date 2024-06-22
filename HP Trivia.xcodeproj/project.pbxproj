@@ -21,6 +21,7 @@
 		4C1D2EF92C25CCFF00E54436 /* negative-beeps.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EF12C25CCFF00E54436 /* negative-beeps.mp3 */; };
 		4C1D2EFA2C25CCFF00E54436 /* spellcraft.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4C1D2EF22C25CCFF00E54436 /* spellcraft.mp3 */; };
 		4C1D2EFC2C25CFC700E54436 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFB2C25CFC700E54436 /* Constants.swift */; };
+		4C1D2EFE2C26F1A900E54436 /* Instructions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFD2C26F1A900E54436 /* Instructions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		4C1D2EF12C25CCFF00E54436 /* negative-beeps.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "negative-beeps.mp3"; sourceTree = "<group>"; };
 		4C1D2EF22C25CCFF00E54436 /* spellcraft.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = spellcraft.mp3; sourceTree = "<group>"; };
 		4C1D2EFB2C25CFC700E54436 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4C1D2EFD2C26F1A900E54436 /* Instructions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instructions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				4C1D2EDB2C25CC1000E54436 /* HP_TriviaApp.swift */,
 				4C1D2EDD2C25CC1000E54436 /* ContentView.swift */,
+				4C1D2EFD2C26F1A900E54436 /* Instructions.swift */,
 				4C1D2EFB2C25CFC700E54436 /* Constants.swift */,
 				4C1D2EE92C25CCC700E54436 /* trivia.json */,
 				4C1D2EDF2C25CC1200E54436 /* Assets.xcassets */,
@@ -178,6 +181,7 @@
 			files = (
 				4C1D2EDE2C25CC1000E54436 /* ContentView.swift in Sources */,
 				4C1D2EDC2C25CC1000E54436 /* HP_TriviaApp.swift in Sources */,
+				4C1D2EFE2C26F1A900E54436 /* Instructions.swift in Sources */,
 				4C1D2EFC2C25CFC700E54436 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
