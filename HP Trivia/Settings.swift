@@ -7,16 +7,9 @@
 
 import SwiftUI
 
-enum BookStatus {
-    case active
-    case inactive
-    case locked
-}
-
 struct Settings: View {
     @Environment(\.dismiss) private var dismiss
-    @State private var books: [BookStatus] = [.active, .active, .inactive, .locked, .locked, .locked, .locked]
-    
+    @EnvironmentObject private var store: Store
     var body: some View {
         ZStack{
             ParchmentBackground()
@@ -30,7 +23,7 @@ struct Settings: View {
                 ScrollView{
                     LazyVGrid(columns:[GridItem(),GridItem()]){
                         ForEach(0..<7){ i in
-                            if books[i] == .active {
+                            if store.books[i] == .active {
                                 ZStack(alignment: .bottomTrailing){
                                     Image("hp\(i+1)")
                                         .resizable()
@@ -45,10 +38,10 @@ struct Settings: View {
                                         .padding(3)
                                 }
                                 .onTapGesture {
-                                    books[i] = .inactive
+                                    store.books[i] = .inactive
                                 }
                             }
-                            else if books[i] == .inactive {
+                            else if (store.books[i] == .inactive) || (store.books[i] == .locked && store.purchasedIDs.contains("hp\(i+1)")){
                                 ZStack(alignment: .bottomTrailing){
                                     Image("hp\(i+1)")
                                         .resizable()
@@ -65,8 +58,11 @@ struct Settings: View {
                                         .shadow(radius: 1)
                                         .padding(3)
                                 }
+                                .task {
+                                    store.books[i] = .inactive
+                                }
                                 .onTapGesture {
-                                    books[i] = .active
+                                    store.books[i] = .active
                                 }
                             }
                             else {
@@ -85,6 +81,12 @@ struct Settings: View {
                                         .shadow(color: .white.opacity(0.75), radius: 3)
                                         .padding(3)
                                 }
+                                .onTapGesture {
+                                    let product = store.products[i-3]
+                                    Task{
+                                        await store.purchase(product)
+                                    }
+                                }
                             }
                         }
                     }
@@ -96,10 +98,12 @@ struct Settings: View {
                 }
                 .doneButton()
             }
+            .foregroundStyle(.black)
         }
     }
 }
 
 #Preview {
     Settings()
+        .environmentObject(Store())
 }

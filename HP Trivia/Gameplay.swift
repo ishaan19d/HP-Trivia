@@ -335,8 +335,7 @@ struct Gameplay: View {
         .ignoresSafeArea()
         .onAppear {
             animateViewsIn = true
-//            tappedCorrectAns = true
-//            playMusic()
+            playMusic()
         }
     }
 }
