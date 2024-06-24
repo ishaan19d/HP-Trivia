@@ -39,6 +39,7 @@ struct Settings: View {
                                 }
                                 .onTapGesture {
                                     store.books[i] = .inactive
+                                    store.saveStatus()
                                 }
                             }
                             else if (store.books[i] == .inactive) || (store.books[i] == .locked && store.purchasedIDs.contains("hp\(i+1)")){
@@ -60,9 +61,11 @@ struct Settings: View {
                                 }
                                 .task {
                                     store.books[i] = .inactive
+                                    store.saveStatus()
                                 }
                                 .onTapGesture {
                                     store.books[i] = .active
+                                    store.saveStatus()
                                 }
                             }
                             else {

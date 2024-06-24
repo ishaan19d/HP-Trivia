@@ -82,9 +82,9 @@ struct ContentView: View {
                                     .font(.title2)
                                     .padding(.bottom,3)
                                 
-                                Text("33")
-                                Text("27")
-                                Text("15")
+                                Text("\(game.recentScores[0])")
+                                Text("\(game.recentScores[1])")
+                                Text("\(game.recentScores[2])")
                             }
                             .font(.title3)
                             .padding(.horizontal)
@@ -173,16 +173,17 @@ struct ContentView: View {
                     .frame(width: geo.size.width)
                     
                     VStack{
-                        if animateViewsIn {
+                        if animateViewsIn{
                             if store.books.contains(.active) == false {
                                 Text("No questions available. Go to settings.⬆")
+                                    .padding(.top)
                                     .foregroundStyle(.white)
                                     .multilineTextAlignment(.center)
-                                    .transition(.opacity)
+                                    .transition(.offset(y: geo.size.height/3).combined(with: .opacity))
                             }
                         }
                     }
-                    .animation(.easeInOut.delay(3), value: animateViewsIn)
+                    .animation(.easeOut(duration: 0.7).delay(3),value: animateViewsIn)
                     
                     Spacer()
                     
@@ -193,7 +194,9 @@ struct ContentView: View {
         .ignoresSafeArea()
         .onAppear{
             playAudio()
-            animateViewsIn.toggle()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                animateViewsIn.toggle() //to make sure book status is loaded before animation kicks in
+            }
         }
         .sheet(isPresented: $showInstructions, content: {
             Instructions()
@@ -205,6 +208,12 @@ struct ContentView: View {
         .fullScreenCover(isPresented: $playGame, content: {
             Gameplay()
                 .environmentObject(game)
+                .onAppear{
+                    audioPlayer.setVolume(0, fadeDuration: 2)
+                }
+                .onDisappear{
+                    audioPlayer.setVolume(1, fadeDuration: 3)
+                }
         })
     }
 }
