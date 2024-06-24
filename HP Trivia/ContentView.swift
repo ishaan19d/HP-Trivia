@@ -18,11 +18,24 @@ struct ContentView: View {
     @State private var showInstructions = false
     @State private var showSettings = false
     @State private var playGame = false
+    
     private func playAudio() {
         let sound = Bundle.main.path(forResource: "magic-in-the-air", ofType: "mp3")
         audioPlayer = try! AVAudioPlayer(contentsOf: URL(filePath: sound!))
         audioPlayer.numberOfLoops = -1
         audioPlayer.play()
+    }
+    
+    private func filterQuestions(){
+        var books:[Int] = []
+        for (index, status) in store.books.enumerated() {
+            if status == .active {
+                books.append(index+1)
+            }
+        }
+        
+        game.filterQuestions(basedOn: books)
+        game.newQuestion()
     }
     
     var body: some View {
@@ -50,7 +63,7 @@ struct ContentView: View {
                                 Text("HP")
                                     .font(.custom(Constants.hpFont, size: 70))
                                     .padding(.bottom, -50)
-                                //note here
+                                
                                 Text("Trivia")
                                     .font(.custom(Constants.hpFont, size: 60))
                             }
@@ -111,6 +124,8 @@ struct ContentView: View {
                         VStack{
                             if animateViewsIn {
                                 Button{
+                                    filterQuestions()
+                                    game.startGame()
                                     playGame.toggle()
                                 } label: {
                                     Text("Play")
@@ -118,7 +133,7 @@ struct ContentView: View {
                                         .foregroundStyle(.white)
                                         .padding(.vertical,7)
                                         .padding(.horizontal, 50)
-                                        .background(.brown)
+                                        .background(store.books.contains(.active) ? .brown : .gray)
                                         .clipShape(.rect(cornerRadius: 10))
                                         .shadow(radius: 5)
                                 }
@@ -129,6 +144,7 @@ struct ContentView: View {
                                     }
                                 }
                                 .transition(.offset(y: geo.size.height/3))
+                                .disabled(store.books.contains(.active) ? false : true)
                             }
                         }
                         .animation(.easeOut(duration: 0.7).delay(2),value: animateViewsIn)
@@ -155,6 +171,18 @@ struct ContentView: View {
                         Spacer()
                     }
                     .frame(width: geo.size.width)
+                    
+                    VStack{
+                        if animateViewsIn {
+                            if store.books.contains(.active) == false {
+                                Text("No questions available. Go to settings.⬆")
+                                    .foregroundStyle(.white)
+                                    .multilineTextAlignment(.center)
+                                    .transition(.opacity)
+                            }
+                        }
+                    }
+                    .animation(.easeInOut.delay(3), value: animateViewsIn)
                     
                     Spacer()
                     
