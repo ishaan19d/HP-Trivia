@@ -9,6 +9,7 @@ import SwiftUI
 import AVKit
 
 struct ContentView: View {
+    @EnvironmentObject private var game: GameViewModel
     @EnvironmentObject private var store: Store
     @State private var audioPlayer: AVAudioPlayer!
     @State private var scalePlayButton = false
@@ -175,6 +176,7 @@ struct ContentView: View {
         })
         .fullScreenCover(isPresented: $playGame, content: {
             Gameplay()
+                .environmentObject(game)
         })
     }
 }
@@ -182,4 +184,5 @@ struct ContentView: View {
 #Preview {
     ContentView()
         .environmentObject(Store())
+        .environmentObject(GameViewModel())
 }

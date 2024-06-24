@@ -25,6 +25,8 @@
 		4C1D2F002C26FC3C00E54436 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2EFF2C26FC3C00E54436 /* Settings.swift */; };
 		4C1D2F022C2709C800E54436 /* Gameplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2F012C2709C800E54436 /* Gameplay.swift */; };
 		4C1D2F052C28587F00E54436 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2F042C28587F00E54436 /* Store.swift */; };
+		4C1D2F072C2948F000E54436 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2F062C2948F000E54436 /* Question.swift */; };
+		4C1D2F092C29582800E54436 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C1D2F082C29582800E54436 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		4C1D2F012C2709C800E54436 /* Gameplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameplay.swift; sourceTree = "<group>"; };
 		4C1D2F032C28562900E54436 /* HPConfig.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = HPConfig.storekit; sourceTree = "<group>"; };
 		4C1D2F042C28587F00E54436 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		4C1D2F062C2948F000E54436 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		4C1D2F082C29582800E54436 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +89,8 @@
 				4C1D2EFD2C26F1A900E54436 /* Instructions.swift */,
 				4C1D2EFF2C26FC3C00E54436 /* Settings.swift */,
 				4C1D2F012C2709C800E54436 /* Gameplay.swift */,
+				4C1D2F062C2948F000E54436 /* Question.swift */,
+				4C1D2F082C29582800E54436 /* GameViewModel.swift */,
 				4C1D2F042C28587F00E54436 /* Store.swift */,
 				4C1D2EFB2C25CFC700E54436 /* Constants.swift */,
 				4C1D2F032C28562900E54436 /* HPConfig.storekit */,
@@ -190,7 +196,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1D2F092C29582800E54436 /* GameViewModel.swift in Sources */,
 				4C1D2F052C28587F00E54436 /* Store.swift in Sources */,
+				4C1D2F072C2948F000E54436 /* Question.swift in Sources */,
 				4C1D2EDE2C25CC1000E54436 /* ContentView.swift in Sources */,
 				4C1D2F022C2709C800E54436 /* Gameplay.swift in Sources */,
 				4C1D2EDC2C25CC1000E54436 /* HP_TriviaApp.swift in Sources */,
